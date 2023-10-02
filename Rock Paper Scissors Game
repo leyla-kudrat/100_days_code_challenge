@@ -1,0 +1,61 @@
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+#Write your code below this line 👇
+import random 
+
+choice = input("What do you choose? ")
+if choice == 'rock':
+	print(rock)
+elif choice == 'paper':
+	print(paper)
+elif choice == 'scissors':
+	print(scissors)
+
+print("Computer chooses:")
+random_choice = [rock,paper,scissors]
+rand_sign = random.choice(random_choice)
+print(rand_sign)
+
+if choice == 'rock' and rand_sign == random_choice[0]:
+	print('Draw')
+elif choice == 'paper' and rand_sign == random_choice[1]:
+	print('Draw')
+elif choice == 'scissors' and rand_sign == random_choice[2]:
+	print('Draw')
+elif choice == 'rock' and rand_sign == random_choice[2]:
+	print('You win')
+elif choice == 'scissors' and rand_sign == random_choice[0]:
+	print('Computer wins')
+elif choice == 'paper' and rand_sign == random_choice[0]:
+	print('You win!')
+elif choice == 'rock' and rand_sign == random_choice[1]:
+	print('Computer wins!')
+elif choice == 'scissors' and rand_sign == random_choice[1]:
+	print('You win!')
+elif choice == 'paper' and rand_sign == random_choice[2]:
+	print('Computer wins!')
